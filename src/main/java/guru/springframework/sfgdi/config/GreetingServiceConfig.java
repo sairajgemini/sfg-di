@@ -1,6 +1,5 @@
 package guru.springframework.sfgdi.config;
 
-import guru.springframework.pets.CatPetService;
 import guru.springframework.pets.PetService;
 import guru.springframework.pets.PetServiceFactory;
 import guru.springframework.sfgdi.repositories.EnglishGreetingRepository;
