@@ -36,15 +36,15 @@ public class GreetingServiceConfig {
         return new I18NSpanishGreetingService();
     }
 
-    @Bean
-    EnglishGreetingRepository englishGreetingRepository() {
-        return new EnglishGreetingRepositoryImpl();
-    }
-
     @Profile("EN")
     @Bean("i18NService")
     I18NEnglishGreetingService i18NEnglishGreetingService(EnglishGreetingRepository englishGreetingRepository) {
         return new I18NEnglishGreetingService(englishGreetingRepository);
+    }
+
+    @Bean
+    EnglishGreetingRepository englishGreetingRepository() {
+        return new EnglishGreetingRepositoryImpl();
     }
 
     @Primary
